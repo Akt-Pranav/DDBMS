@@ -1,0 +1,97 @@
+/* Apply a dark background and modern font styles for the body */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  color: #d4d4dc; /* Light gray text for better contrast */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  padding: 0 20px; /* Adds padding around content */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Style for code blocks */
+code {
+  font-family: 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background-color: #2e2e3e; /* Slightly lighter background for code blocks */
+  color: #c5c8c6; /* Light gray for code text */
+  padding: 4px 8px; /* Add some padding around code */
+  border-radius: 4px; /* Rounded corners */
+  display: inline-block; /* Keeps it inline */
+  margin: 0 4px; /* Small margin around code */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Headings with subtle styling */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff; /* Bright white for headings */
+  margin-bottom: 0.5em; /* Space between heading and content */
+}
+
+/* Links with a modern hover effect */
+a {
+  color: #61dafb; /* Soft blue color for links */
+  text-decoration: none; /* No underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+  color: #21a1f1; /* Slightly darker blue on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Buttons with a modern look */
+button {
+  background-color: #3a3a4f; /* Darker button background */
+  color: #d4d4dc; /* Light text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+button:hover {
+  background-color: #50506e; /* Slightly lighter background on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Input fields with modern styles */
+input, textarea {
+  background-color: #2e2e3e; /* Darker background for input fields */
+  color: #d4d4dc; /* Light text color */
+  border: 1px solid #3a3a4f; /* Soft border */
+  padding: 10px; /* Padding inside the input */
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: 1em; /* Space below the input */
+  width: 100%; /* Full width */
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+input:focus, textarea:focus {
+  border-color: #61dafb; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Add some padding around content */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center content */
+}
+
+/* Beautiful scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e2f; /* Background for scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3a3a4f; /* Darker scrollbar thumb */
+  border-radius: 10px; /* Rounded scrollbar thumb */
+  border: 3px solid #1e1e2f; /* Border around scrollbar thumb */
+}

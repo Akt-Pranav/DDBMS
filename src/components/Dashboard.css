@@ -1,0 +1,199 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title */
+.dashboard-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+.dashboard {
+  padding: 20px;
+}
+
+.dashboard-header {
+ 
+}
+
+.view-toggle button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Loading Spinner Styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height of the viewport */
+}
+
+/* Spinner styles */
+.spinner {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-top: 8px solid  #ffffff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-message {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+
+/* Classes and Students Section */
+.classes-section,
+.students-section,
+.assignments-section {
+  margin-bottom: 40px;
+}
+
+/* Class List */
+.classes-list,
+.students-list,
+.submissions-list {
+  list-style: none;
+}
+
+.class-item,
+.student-item,
+.submission-item {
+  margin-bottom: 10px;
+}
+
+/* Button Styles */
+button {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #0d0d0d;
+}
+
+/* Back Button */
+.back-button {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border-color: #ffffff;
+}
+
+/* Class Button */
+.class-button,
+.student-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.class-button:hover,
+.student-button:hover {
+  background-color: #ffffff;
+  color: #0d0d0d;
+}
+
+/* Submissions List */
+.submission-item {
+  background-color: #262626;
+  padding: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.submission-item p {
+  margin-bottom: 8px;
+}
+
+.submission-item .assignment-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.submission-item .submission-state {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+.files-list {
+  list-style: none;
+}
+
+.file-item a {
+  color: #1abc9c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.file-item a:hover {
+  color: #cccccc;
+}
+
+/* Animation for the spinner
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */

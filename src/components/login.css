@@ -1,0 +1,106 @@
+/* Overall container with a black-and-white theme matching the landing page */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000, #333); /* Black gradient */
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Header animation and styling */
+.login-header {
+  margin-bottom: 40px; /* Increased margin for better spacing */
+  position: relative; /* Position relative for pseudo-element positioning */
+  animation: fadeIn 1.2s ease-in; /* Fade-in effect */
+}
+
+.login-header h1 {
+  font-size: 3.5rem; /* Slightly larger for emphasis */
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Underline effect using a pseudo-element */
+.login-header h1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Adjust for desired spacing below the text */
+  width: 0;
+  height: 2px; /* Height of the underline */
+  background: #fff; /* Color of the underline */
+  transition: width 0.5s ease, left 0.5s ease; /* Animate width and left */
+  z-index: -1; /* Position behind the text */
+}
+
+/* Animation trigger on hover */
+.login-header h1:hover::after {
+  width: 100%; /* Expand to full width */
+  left: 0; /* Align to the left */
+}
+
+/* Header paragraph styling */
+.login-header p {
+  padding-top: 20px;
+  font-weight: bold; /* Corrected to 'bold' */
+  font-size: 1.2rem;
+  color: #aaa; /* Lighter text for a subtle contrast */
+}
+
+/* Content section animation and styling */
+.login-content {
+  animation: slideIn 1.2s ease-in;
+  padding: 0 20px; /* Add padding for better text spacing */
+  max-width: 600px; /* Ensuring the content does not stretch too wide */
+}
+
+.login-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px; /* Increased margin for better spacing */
+  color: #ddd; /* Light grey for subtle contrast */
+  text-align: justify; /* Justify text for a cleaner look */
+}
+
+/* Button styling to match landing page */
+.login-button {
+  background-color: #fff;
+  color: #000;
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Add space above the button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.login-button:hover {
+  background-color: #ddd;
+}
+
+/* Animations for smooth entrance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

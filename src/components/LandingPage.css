@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #f0f0f0; /* Light text */
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px; /* Adjust the logo size */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  position: fixed; /* Change to fixed to keep it at the right while scrolling */
+  top: 20px; /* Adjust this value for vertical positioning */
+  right: 20px; /* Distance from the right side */
+  background: #252524; /* Background color */
+  width: 200px; /* Set the width as needed */
+  z-index: 1000; /* Ensure it appears above other content */
+  padding: 10px; /* Add some padding */
+  border-radius: 8px; /* Optional: round the corners */
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: large;
+  font-weight: bolder;
+  justify-content: flex-end; /* Align to the right */
+  padding: 10px 0;
+}
+
+.navbar li {
+  margin: 0 15px; /* Space between navbar items */
+}
+
+.navbar a {
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #e6b800; /* Highlight color */
+}
+
+.landing-header {
+  text-align: center;
+  margin: 40px 0;
+  opacity: 0; /* Start hidden for animation */
+  animation: fadeInUp 1s forwards; /* Animation for welcome section */
+}
+
+.landing-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.landing-header p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #f5f4f1; /* Highlight color for button */
+  color: #121212; /* Dark text for button */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e6b800; /* Darken on hover */
+}
+
+.content-section {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #1f1f1f; /* Dark background for content */
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+.content-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f5f4f1; /* Highlight color for headers */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.animated-box {
+  margin: 10px 0;
+}
+
+.left-animation {
+  animation: slideInLeft 0.5s forwards; /* Animation for left side */
+}
+
+.right-animation {
+  animation: slideInRight 0.5s forwards; /* Animation for right side */
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Space out the boxes evenly */
+  gap: 10px; /* Increased space between the steps */
+}
+
+.step {
+  padding: 15px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #f0f0f0; 
+  opacity: 0;
+  animation: fadeIn 1s forwards; 
+  flex: 1; 
+  min-width: 150px; 
+}
+
+.landing-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  font-size: 1.2em;
+  font-weight: bolder;
+  color: #e6b800  ; /* Lighter gray for footer */
+}
+
+.step1 {
+  animation-delay: 0.2s; /* Step 1 appears first */
+}
+
+.step2 {
+  animation-delay: 0.4s; /* Step 2 appears after Step 1 */
+}
+
+.step3 {
+  animation-delay: 0.8s; /* Step 3 appears after Step 2 */
+}
+
+.step4 {
+  animation-delay: 1.0s; /* Step 4 appears after Step 3 */
+}
+
+.step5 {
+  animation-delay: 1.2s; /* Step 5 appears after Step 4 */
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar ul {
+      flex-direction: column; /* Stack items on smaller screens */
+      align-items: flex-end; /* Align to the right */
+  }
+
+  .landing-header h1 {
+      font-size: 2em; /* Adjust font size */
+  }
+
+  .landing-header p {
+      font-size: 1em; /* Adjust font size */
+  }
+
+  .cta-button {
+      width: 100%; /* Full width button on small screens */
+  }
+
+  .content-section {
+      padding: 15px; /* Adjust padding */
+  }
+
+  .step {
+      padding: 10px; /* Adjust padding */
+  }
+}
